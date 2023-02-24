@@ -1,4 +1,4 @@
-const apiKey = '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';
+const apiKey = 'YOUR-API-KEY';
 const url = 'https://api.openai.com/v1/engines/text-davinci-003/completions';
 
 export const generateAnswer = async (question: String) => {
