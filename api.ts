@@ -1,8 +1,8 @@
-const apiKey = 'YOUR-API-KEY';
-const url = 'https://api.openai.com/v1/engines/text-davinci-003/completions';
+const apiKey = process.env.API_KEY;
+const url = process.env.URL_OPEN_IA;
 
 export const generateAnswer = async (question: String) => {
-  const response = await fetch(url, {
+  const response = await fetch(url ?? 'undefined', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
