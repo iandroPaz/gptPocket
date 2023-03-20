@@ -1,8 +1,10 @@
-const apiKey = process.env.API_KEY;
-const url = process.env.URL_OPEN_IA;
+import {API_KEY, URL_OPEN_IA} from '@env';
+
+const apiKey = API_KEY;
+const url = URL_OPEN_IA;
 
 export const generateAnswer = async (question: String) => {
-  const response = await fetch(url ?? 'undefined', {
+  const response = await fetch(url, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -16,6 +18,5 @@ export const generateAnswer = async (question: String) => {
   });
 
   const data = await response.json();
-  console.log('Retorno: ', data);
   return data.choices[0].text.trim().replaceAll('?', '');
 };

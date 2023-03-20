@@ -7,9 +7,11 @@
     "sourceMap": true,
     "types": ["node"]
   },
-  "include": [
-    "src/**/*.ts"
-  ],
+  "typeRoots": ["./types"],
+  "ts-node": {
+    "files": true
+  },
+  "include": ["src/**/*.ts", "env.ts"],
   "exclude": [
     "node_modules"
   ]

@@ -30,8 +30,11 @@ const App = () => {
   return (
     <View style={styles.container}>
       <Image source={require('./src/openai.png')} style={styles.logoOpenai} />
-      <Text style={styles.plusText}>{"+"}</Text>
-      <Image source={require('./src/piegoBranca.png')} style={styles.logoPiego} />
+      <Text style={styles.plusText}>{'+'}</Text>
+      <Image
+        source={require('./src/piegoBranca.png')}
+        style={styles.logoPiego}
+      />
       <ScrollView style={styles.resultScroll}>
         <Text style={styles.resultText}>{returnText}</Text>
       </ScrollView>
